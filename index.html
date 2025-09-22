@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NUST Student Profiles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="header.jpg" alt="NUST Banner" class="header-img">
+</header>
+
+<h1 class="page-heading">Register Students</h1>
+
+<!-- Registration Form -->
+<section class="form-section">
+  <form id="regForm" novalidate>
+    <label>First Name: 
+      <input type="text" id="first" required>
+      <span class="error" id="firstError" aria-live="polite"></span>
+    </label>
+
+    <label>Last Name: 
+      <input type="text" id="last" required>
+      <span class="error" id="lastError" aria-live="polite"></span>
+    </label>
+
+    <label>Email: 
+      <input type="email" id="email" required>
+      <span class="error" id="emailError" aria-live="polite"></span>
+    </label>
+
+    <label>Programme: 
+      <input type="text" id="prog" required>
+      <span class="error" id="progError" aria-live="polite"></span>
+    </label>
+
+    <label>Year:
+      <select id="year" required>
+        <option value="">-- Select Year --</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <span class="error" id="yearError" aria-live="polite"></span>
+    </label>
+
+    <label>Interests: 
+      <input type="text" id="interests" placeholder="Coding, Gaming...">
+      <span class="error" id="interestsError" aria-live="polite"></span>
+    </label>
+
+    <label>Photo URL: 
+      <input type="url" id="photo" placeholder="student.jpg">
+      <span class="error" id="photoError" aria-live="polite"></span>
+    </label>
+
+    <button type="submit">Add Student</button>
+  </form>
+
+  <div id="live" aria-live="polite"></div>
+</section>
+
+<!-- Cards Grid -->
+<main>
+  <div class="card-grid" id="cards">
+    <!-- Dynamic cards appear here -->
+  </div>
+</main>
+
+<!-- Summary Table -->
+<section class="table-section">
+  <table id="summary">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Programme</th>
+        <th>Year</th>
+        <th>Interests</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dynamic rows appear here -->
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  <p>&copy; 2025 NUST Student Profiles | Designed by Esther Kamati</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

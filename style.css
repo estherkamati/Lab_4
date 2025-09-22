@@ -1,0 +1,171 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Calibri, sans-serif;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+
+header {
+  flex-shrink: 0;
+}
+.header-img {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+  display: block;
+}
+
+
+.page-heading {
+  text-align: center;
+  margin: 1rem 0;
+  color: #000034; 
+}
+
+
+.form-section {
+  max-width: 500px;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f0f0f0;
+}
+.form-section label {
+  display: block;
+  margin: 0.5rem 0;
+}
+.form-section input, .form-section select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
+  border: 1px solid #999;
+}
+.form-section button {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  background: #000034;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.error {
+  display: block;
+  font-size: 0.85rem;
+  color: crimson;
+  margin-top: 0.2rem;
+}
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+.card {
+  background: #e6e6fa; /* light lavender */
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.8rem;
+}
+.card h2 {
+  font-size: 1.3rem;
+  color: #000034;
+  margin-bottom: 0.3rem;
+}
+.card .course {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #000034;
+  margin-bottom: 0.5rem;
+}
+.card button.remove {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  background: crimson;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+.table-section {
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+table th {
+  background: #000034;
+  color: white;
+}
+table button.remove {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000034;
+  color: white;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .form-section, .table-section {
+    width: 90%;
+  }
+}
+
